@@ -1,0 +1,19 @@
+﻿<?eml CMSFront::access(); ?><html>
+<head>
+<link href="admin.css" rel="stylesheet" type="text/css" />
+<link href="cmenu.css" rel="stylesheet" type="text/css" />
+<link href="ajax.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body_modules">
+<script language="JavaScript" src="admin.js"></script>
+<script language="JavaScript" src="cmenu.js"></script>
+<script language="JavaScript" src="/ajax.js"></script>
+
+<?eml CMSFront::modules(); ?>
+
+<script language="JavaScript">
+<?eml CMSFront::dnd(); ?>
+</script>
+
+</body>
+</html>

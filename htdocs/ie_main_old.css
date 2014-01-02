@@ -1,0 +1,28 @@
+*html .container {height: 100%;}
+.map, .contacts h3, .filters, .filters-inner, .filters form, .filters fieldset, .filters li, .footer-inner, .footer, .content, .header, .place-lt, .place-rt, .place-lb, .place-lb ul, .recommended-inner ul {zoom: 1;}
+*html .filters-block {height: 385px;}
+*html .rec-rb {height: 93px;}
+.filters ul input {margin: -1px 2px 0 0;}
+.select-stars span, .stars {overflow:hidden;}
+*html .container, *html .footer {width:expression((document.documentElement.clientWidth || document.body.clientWidth) < 996 ? "996px" : "auto");}
+*html .logo a span {cursor: pointer; width: expression(this.firstChild.width); filter: expression("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+this.firstChild.src+"', sizingMethod='image')"); background: expression("transparent url("+this.firstChild.src.replace(".png", ".gif")+") no-repeat"); backgr\ound: none !important;}
+*html .logo a span img {behavior: expression(this.style.visibility="hidden");}
+*html .bg {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/bg.png', sizingMethod='scale');}
+.filters li {zoom: 1; vertical-align: top; padding: 0;}
+.nav span, .map-tags span {cursor: pointer;}
+*html .nav-left {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-left.png', sizingMethod='image');}
+*html .nav-right {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-right.png', sizingMethod='image');}
+*html .nav-inner {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav.png', sizingMethod='scale');}
+*html .current .nav-left {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-current-left.png', sizingMethod='image');}
+*html .current .nav-right {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-current-right.png', sizingMethod='image');}
+*html .current .nav-inner {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-current.png', sizingMethod='scale');}
+*html .nav .right .nav-left {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-other-left.png', sizingMethod='image');}
+*html .nav .right .nav-right {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-other-right.png', sizingMethod='image');}
+*html .nav .right .nav-inner {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/nav-other.png', sizingMethod='scale');}
+*html .tag-left {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/tag-left.png', sizingMethod='image');}
+*html .tag-right {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i2/tag-right.png', sizingMethod='image');}
+
+*html .bg {width:expression(document.getElementById('map').clientWidth - 14);}
+*html .map-bot {width:expression(document.getElementById('map').clientWidth - 46);}
+*html .fixie1 {display: block; position: absolute; left: 0; bottom: -1px; width: 100%; background: #fff; height: 1px; overflow: hidden;}
+*html .fixie2 {display: block; position: absolute; right: -1px; top: 0; width: 1px; background: #fff; height: 393px; overflow: hidden;}

@@ -1,0 +1,41 @@
+﻿<?eml CMSFront::access(); ?><html>
+<head>
+<link href="admin.css" rel="stylesheet" type="text/css" />
+<link href="fileman.css" rel="stylesheet" type="text/css" />
+<link href="ajax.css" rel="stylesheet" type="text/css" />
+<style>
+	
+	.fileman img
+	{
+		width: 16px;
+		height: 16px;
+	}
+	
+</style>
+</head>
+<body id="body_fileman">
+<script language="JavaScript" src="admin.js"></script>
+<script language="JavaScript" src="cmenu.js"></script>
+<script language="JavaScript" src="/ajax.js"></script>
+
+<table width="100%" height="100%">
+<tr><td class="framehead">
+Мои документы
+</td></tr>
+<tr><td class="main_td" valign="top">
+
+<div name="scrolldiv" class="scrolldiv">
+<div class="left_padding">
+<?eml CMSBuilder::Fileman->action(); ?>
+</div>
+</div>
+
+</td></tr>
+</table>
+
+<script language="JavaScript">
+<?eml #CMSFront::jscript(); ?>
+</script>
+
+</body>
+</html>

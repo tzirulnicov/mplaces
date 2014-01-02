@@ -1,0 +1,8 @@
+cmsbuilder/etc
+cmsbuilder/tmp
+cmsbuilder/Config.pm
+*.zip
+*.sql
+*.txt
+create_image
+task

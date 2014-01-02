@@ -1,0 +1,44 @@
+#php_value display_errors 1
+
+DirectoryIndex index.html index.htm index.shtml index.php index.xml
+
+#Options +Indexes
+Options +FollowSymlinks
+
+RewriteEngine  On
+RewriteBase    /
+
+#-------------RBS SEO start
+
+RewriteCond %{HTTP_HOST} ^mplaces\.ru$ [NC]
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteRule ^(.*)$ http://www.mplaces.ru/$1 [R=301,L]
+
+RewriteRule ^city\/StPetersburg\/hotels\/modfeedback(.*)$ http://www.mplaces.ru/modfeedback$1 [R=301,L]
+
+RewriteRule ^page141\.html$ http://www.mplaces.ru/ [R=301,L]
+
+#-------------RBS SEO end
+
+#RewriteCond %{REQUEST_URI}                                      !\/admin
+#RewriteCond %{REMOTE_ADDR} !54.243.241.178
+#RewriteCond %{REQUEST_FILENAME}                                         !-f
+#RewriteRule (.*) cmsb.php?$1
+
+
+#RewriteCond %{HTTP_HOST} ^www.mplaces.ru
+RewriteCond %{REQUEST_URI}							^/$ [OR]
+RewriteCond %{REQUEST_FILENAME}						!-d
+RewriteCond %{REQUEST_URI}							\.ehtml$ [OR]
+RewriteCond %{REQUEST_FILENAME}						!-f
+RewriteCond %{REQUEST_FILENAME}						!-l
+RewriteRule (.*) /cgi-bin/cmsb.pl/$1
+
+#RewriteCond %{HTTP_HOST} ^www.mplaces.ru
+RewriteCond %{REQUEST_URI}							/$
+RewriteCond %{REQUEST_FILENAME}						-d
+RewriteCond "%{REQUEST_FILENAME}/.cmsb-catch-path"	-f
+RewriteRule (.*) /cgi-bin/cmsb.pl/$1
+
+RewriteOptions MaxRedirects=100
+#LimitInternalRecursion=100

@@ -1,0 +1,14 @@
+﻿.form-message
+{
+	margin: 0.5em 4em;
+}
+
+.form-message .ok
+{
+	color: #008800;
+}
+
+.form-message .error
+{
+	color: #880000;
+}

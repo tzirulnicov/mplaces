@@ -1,0 +1,51 @@
+﻿.ctree
+{
+}
+.ctree .ticon
+{
+	vertical-align: top;
+	display: inline;
+	
+}
+.ctree .dir
+{
+	padding-left: 16px;
+}
+.ctree .dir_noline
+{
+	background-position: 16px top;
+	padding-left: 16px;
+	background-image: url(img/treebg.gif);
+	background-repeat: repeat-y;
+	background-color: #f7f7f7;
+}
+.ctree .line
+{
+	background-position: left top;
+	background-image: url(img/treebgnorm.gif);
+	background-repeat: no-repeat;
+	white-space: nowrap;
+}
+.ctree .line_last
+{
+	background-position: left top;
+	background-image: url(img/treebglast.gif);
+	background-repeat: no-repeat;
+	background-color: #f7f7f7;
+	white-space: nowrap;
+}
+.ctree .line_first
+{
+	background-position: left top;
+	background-image: url(img/treebgfirst.gif);
+	background-repeat: no-repeat;
+	background-color: #f7f7f7;
+	white-space: nowrap;
+}
+.ctree .dir_line
+{
+	background-position: 16px top;
+	padding-left: 16px;
+	background-image: url(img/treebg.gif);
+	background-repeat: repeat-y
+}

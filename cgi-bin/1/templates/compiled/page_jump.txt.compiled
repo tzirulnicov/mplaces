@@ -1,0 +1,54 @@
+# This file is a compiled version of a template that can be run much faster
+# than reparsing the file, yet accomplishes the same thing. You should not
+# attempt to modify this file as any changes you make would be lost as soon as
+# the original template file is modified.
+# Generated: Wed Oct 14 16:56:59 2009
+# Editor: vim: syn=perl
+{
+    parse_date => 1255525019,
+    deps => [],
+    parser_version => 2.058,
+    file_type => 'REL',
+    code => sub {
+
+local $^W; # Get rid of warnings. unfortunately, this won't work for Perl 5.6's -W switch
+my $self = shift;
+my $return = '';
+my $escape = $self->{opt}->{escape};
+my $strict = $self->{opt}->{strict};
+my $tmp;
+$return .= q{<FORM METHOD="POST" ACTION="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=do VALUE='browse'>
+<INPUT TYPE="hidden" NAME=data_source VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=table VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=sort_index VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{sort_index}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=action VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{action}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=fields VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{fields}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=where VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{where}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=example VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{example}, $escape, $strict));
+$return .= q{">
+<INPUT TYPE="hidden" NAME=query VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{query}, $escape, $strict));
+$return .= q{">
+Goto Page: <INPUT TYPE="text" NAME=page VALUE = "" SIZE="10"> of };
+$return .= $tmp if defined($tmp = $self->_get_var(q{pages}, $escape, $strict));
+$return .= q{
+<INPUT TYPE="submit" value=" Go "><P></FORM>};
+return \$return;
+}
+}

@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Бронирование мини отелей, гостинец в Санкт-петербурге</title>
+	<link href="/style_main.css" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=7" />
+		<meta http-equiv="imagetoolbar" content="false" />
+		<link href="/ie_main.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+<script language="JavaScript" src="/jquery.js"></script>
+<script language="JavaScript" src="/googlemap.js"></script>
+ <script src="http://maps.google.com/maps?hl=ru&file=api&amp;v=2&amp;key=ABQIAAAAQjofXjf8rI6r4AogwRg24xTmEemehnhnLGpB4DW9SHQLbMAVIBTBS2gvP0KLYWgkyKkDuBGxIDkZhQ"
+      type="text/javascript"></script>
+    <script type="text/javascript">    
+	var map = null;
+	var geocoder = null;
+	    var elms=new Array(59.940224,30.315742,12);
+var markers=new Array(Array());
+	function searchAddress(){
+	    var address = document.getElementById('search_address').value;
+	    
+	    if (geocoder) {
+		geocoder.getLatLng(
+		  address,
+		  function(point) {
+		    if (!point) {
+		      alert("Адрес \"" + address + "\" не найден.");
+		    } else {
+		      map.setCenter(point, 13);
+		      var marker = new GMarker(point);
+		      map.addOverlay(marker);
+		      marker.openInfoWindowHtml(address);
+		    }
+		  }
+		);
+	      }
+	}
+</script>
+</head>
+
+<body onload="load()">
+	<div class="container">
+
+		
+		<!-- Header -->
+		<div class="header">
+			<div class="header-sidebar">
+				<div class="contacts">
+					<h3><span>Контакты</span> <a href="#">Санкт-Петербург</a></h3>
+					<!--<address>+7(495) 600-47-17</address>
+					<address>+7(495) 600-47-17</address>-->
+<a href="/city/StPetersburg" class="p44">Санкт-Петербург</a></h3><address>+7(812) 622-44-37</address><address>+7(812) 622-44-34</address>
+				</div>
+				<div class="filters">
+					<div class="filters-inner">
+						<form action="">
+							<div class="filters-block">
+								<h3>Фильтры</h3>
+								<ul class="select-stars">
+									<li><label><input type="checkbox"  name="hotel_type" id="z5" checked /><span class="star5"></span></label></li>
+									<li><label><input type="checkbox" name="hotel_type" id="z4" checked /><span class="star4"></span></label></li>
+									<li><label><input type="checkbox" name="hotel_type" id="z3" checked /><span class="star3"></span></label></li>
+									<li><label><input type="checkbox" name="hotel_type" id="mini" checked />Мини отели</label></li>
+								</ul>
+								<h4>Цена:</h4>
+								<ul class="select-price">
+									<li><label><input type="checkbox" name="hotel_price" id="ot1k" checked />От 1000 руб / сутки</label></li>
+
+									<li><label><input type="checkbox" name="hotel_price" id="ot2k" checked />От 2000 руб  / сутки</label></li>
+									<li><label><input type="checkbox" name="hotel_price" id="ot6k" checked />От 6000 руб  / сутки</label></li>
+								</ul>
+								<h4>Станция метро</h4>
+<select name="metro"><option value="">Все станции</option><option value="Station28">Пр. Ветеранов</option><option value="Station27">Парк победы</option><option value="Station26">Спортивная</option><option value="Station25">Пл. Мужества</option><option value="Station24">Пушкинская</option><option value="Station23">Новочеркасская</option><option value="Station22">Елизаровская</option><option value="Station21">Достоевская</option><option value="Station20">Петроградская</option><option value="Station1">Василеостровская</option><option value="Station2">Чернышевская</option><option value="Station3">Гостиный двор</option><option value="Station4">Владимирская</option><option value="Station5">Приморская</option><option value="Station6">Невский пр.</option><option value="Station7">Пл. Ленина</option><option value="Station8">Лиговский пр.</option><option value="Station9">Пл. Восстания</option><option value="Station11">Маяковская</option><option value="Station12">Садовая</option><option value="Station13">Технологический инст.</option><option value="Station14">Кировский завод</option><option value="Station15">Сенная пл.</option><option value="Station16">Ладожская</option><option value="Station17">Пл. Александра Невского</option><option value="Station18">Московская</option><option value="Station19">Черная речка</option><option value="Station67">Озёрки</option></select>
+								<ul class="select">
+									<li><label><input type="checkbox" name="wifi" />Wi-fi интернет</label></li>
+									<li><label><input type="checkbox" name="transfer" />Собственный трансфер</label></li>
+									<li><label><input type="checkbox" name="excursies" />Экскурсии</label></li>
+									<li><label><input type="checkbox" name="city_center" />Центр города</label></li>
+									<li><label><input type="checkbox" name="vip" />VIP</label></li>
+								</ul>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="header-navigation">
+				<div class="header-inner">
+					<h1 class="logo"><a href="/"><span><img src="i2/logo.png" alt="BigCityHotels" /></span></a></h1>
+					<div class="nav">
+						<div class="bg"></div>
+
+						<ul>
+<!--							<li>
+								<a href="#" class="current">
+									<span class="nav-left"></span>
+									<span class="nav-inner">Москва</span>
+									<span class="nav-right"></span>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<span class="nav-left"></span>
+									<span class="nav-inner">Cанкт петербург</span>
+									<span class="nav-right"></span>
+								</a>
+							</li>
+							<li>
+
+								<a href="#">
+									<span class="nav-left"></span>
+									<span class="nav-inner">Краснодар</span>
+									<span class="nav-right"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+
+									<span class="nav-left"></span>
+									<span class="nav-inner">Казань</span>
+									<span class="nav-right"></span>
+								</a>
+							</li>-->
+<li>
+	<a href="/city/moscow">
+		<span class="nav-left"></span>
+		<span class="nav-inner">Москва</span>
+		<span class="nav-right"></span>
+	</a>
+</li><li>
+	<a href="/city/novo-sibirsk">
+		<span class="nav-left"></span>
+		<span class="nav-inner">Новосибирск</span>
+		<span class="nav-right"></span>
+	</a>
+</li><li>
+	<a href="/city/StPetersburg" class="current">
+		<span class="nav-left"></span>
+		<span class="nav-inner">Санкт-Петербург</span>
+		<span class="nav-right"></span>
+	</a>
+</li>
+							<li class="right">
+								<a href="#">
+									<span class="nav-left"></span>
+
+									<span class="nav-inner">    Каталог гостиниц Санкт-Петербурга</span>
+									<span class="nav-right"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="map">
+<!--						<div style="background: url(uploads/map.png) no-repeat; height: 393px;" id="map"></div>-->
+<div id="map" style="height: 393px"></div>
+						<div class="map-left"></div>
+						<div class="map-right"></div>
+						<div class="map-lb"></div>
+						<div class="map-rb"></div>
+						<div class="map-bot"></div>
+						<div class="map-rt"></div>
+						<div class="map-lt"></div>
+						<div class="fixie1"></div>
+						<div class="fixie2"></div>
+<!--						<ul class="map-tags">
+							<li><a href="#"><span class="tag-left"></span><span class="tag-in">Лененсикй проспект</span><span class="tag-right"></span></a></li>
+							<li><a href="#"><span class="tag-left"></span><span class="tag-in">Невский проспект</span><span class="tag-right"></span></a></li>
+							<li><a href="#"><span class="tag-left"></span><span class="tag-in">Главная улица</span><span class="tag-right"></span></a></li>
+							<li class="right"><a href="#"><span class="tag-left"></span><span class="tag-in">Карта</span><span class="tag-right"></span></a></li>
+							<li class="right"><a href="#"><span class="tag-left"></span><span class="tag-in">Спутник</span><span class="tag-right"></span></a></li>
+
+						</ul>
+						<div class="slider">
+							<a href="#"><img src="i2/people.png" alt="" /></a>
+							<a href="#"><img src="i2/plus.gif" alt="" /></a>
+							<div class="scroller"><img src="i2/scroll.gif" alt="" /></div>
+							<a href="#"><img src="i2/minus.gif" alt="" /></a>
+						</div>
+						<div></div>-->
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- Content -->
+		<div class="content">
+			<div class="recommended">
+				<div class="recommended-inner">
+					<h2>РЕКОМЕНДУЕМ ГОСТИНИЦЫ В САНКТ-ПЕТЕРБУРГЕ</h2>
+<ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel7.html" class="rec-img"><img src="/ee/wwfiles/Butterfly_10.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel7.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel7.html">Гостиница Butterfly</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback19.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel22.html" class="rec-img"><img src="/ee/wwfiles/_10028.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel22.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel22.html">Гостиница Австрийский дворик</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback34.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel35.html" class="rec-img"><img src="/ee/wwfiles/_10147.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel35.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel35.html">Гостиница Аркадия</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback47.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel36.html" class="rec-img"><img src="/ee/wwfiles/_-_.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel36.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel36.html">Гостиница Арт-отель</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback48.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel87.html" class="rec-img"><img src="/ee/wwfiles/_150_.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel87.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel87.html">Гостиница Невский 150</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback99.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel91.html" class="rec-img"><img src="/ee/wwfiles/_10540.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel91.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel91.html">Гостиница Невский Клуб</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback103.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel142.html" class="rec-img"><img src="/ee/wwfiles/_105146.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel142.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel142.html">Гостиница Самсон</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback154.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel144.html" class="rec-img"><img src="/ee/wwfiles/_105147.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel144.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel144.html">Гостиница Соната на Большом</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback156.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel149.html" class="rec-img"><img src="/ee/wwfiles/_105184.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel149.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel149.html">Гостиница Староневский Дом</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback161.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel163.html" class="rec-img"><img src="/ee/wwfiles/_105311.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel163.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel163.html">Гостиница Южная</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback175.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel223.html" class="rec-img"><img src="/ee/wwfiles/bar_1.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel223.html?comments"  class="comments">Отзывы <span>(2)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel223.html">Гостиница Поликофф</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback236.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel224.html" class="rec-img"><img src="/ee/wwfiles/1.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel224.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel224.html">Гостиница "Братья Карамазовы"</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback237.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel225.html" class="rec-img"><img src="/ee/wwfiles/13.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel225.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel225.html">Гостиница Комердинеръ</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback238.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel228.html" class="rec-img"><img src="/ee/wwfiles/1.gif_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel228.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel228.html">Гостиница «Best Value Hotel»</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback240.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel227.html" class="rec-img"><img src="/ee/wwfiles/14.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel227.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel227.html">Гостиница Чехов</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback239.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel229.html" class="rec-img"><img src="/ee/wwfiles/16.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel229.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel229.html">Гостиница "Репин"</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback241.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel230.html" class="rec-img"><img src="/ee/wwfiles/113.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel230.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel230.html">Гостиница Апайда</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback242.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel231.html" class="rec-img"><img src="/ee/wwfiles/18.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel231.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel231.html">Гостиница "Счастливый Пушкин"</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback243.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul><ul>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel232.html" class="rec-img"><img src="/ee/wwfiles/110.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel232.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel232.html">Гостиница Марков-отель</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback244.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li>	<li>
+		<div class="rec-lt">
+		<div class="rec-rt">
+		<div class="rec-lb">
+		<div class="rec-rb">
+			<div class="left">
+				<a href="hotel233.html" class="rec-img"><img src="/ee/wwfiles/nomer1.jpg_small1.jpeg" alt="" /></a>
+				Мини отели
+
+				<a href="hotel233.html?comments"  class="comments">Отзывы <span>(0)</span></a>
+			</div>
+			<div class="rec-inner"><div class="header-inner">
+				<h4><a href="hotel233.html">Гостиница Мечта</a></h4>
+				<ul>
+					<li>Номера от <b>0</b> 
+до <b>0</b> рублей</li>
+				</ul>
+				<a href="modfeedback245.html" class="bron">Бронируем</a>
+			</div></div>
+		</div>
+		</div>
+		</div>
+
+		</div>		
+	</li></ul>
+				</div>
+			</div>
+			<div class="places">
+
+				<div class="places-inner">
+					<h2>Экскурсии <a href="#">в Санкт-петербурге</a></h2>
+					<div class="place-lt">
+						<div class="place-rt">
+							<div class="place-lb">
+								<ul>
+      <li><a href="/city/moscow/page74.html">Экскурсии по Золотому кольцу России</a></li>
+<li><a href="/city/moscow/page84.html">Обзорная экскурсия по Москве</a></li>
+<li><a href="/city/moscow/page85.html">Экскурсия "ВЕЧЕРНЯЯ МОСКВА" ( 3/4 часа )</a></li>
+<li><a href="/city/moscow/page86.html">Экскурсия в Кремль и соборы</a></li>
+<li><a href="/city/moscow/page94.html">Экскурсия по территории Кремля с посещением Успенского Собора</a></li>
+<li><a href="/city/moscow/page95.html">Оружейная Палата</a></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about">
+
+				<h3>Главная</h3>
+					<p>На нашем сайте представлена огромная база гостиниц Санкт-Петербурга: от мини-отелей до шикарных пятизвездочных гостиниц! Номер в любой из них вы можете забронировать прямо на сайте.<br />
+<br />
+Санкт-Петербург - благородный город, выросший на берегах холодной Невы три столетия назад. В любви к нему признаются миллионы людей, великие поэты воспевали его в своих произведениях, и от них пошла традиция называть Санкт-Петербург культурным центром России. Он необычен, самобытен и самодостаточен, загадочен и завораживающе красив.<br />
+<br />
+Великолепное архитектурное наследие накоплено им за сотни лет, и продолжает пополняться. Помимо постройки новых зданий и реставрации старинных особняков, власти города расширяют и сферу обслуживания &ndash; это стало уже серьезной необходимостью в Петербурге, который стремятся посетить и россияне, и гости из-за границы. Теперь в Питере протягивают новые линии метрополитена, возводят развлекательные и спортивные центры, строятся новые гостиницы Санкт-Петербурга. Большая работа ведется по улучшению состояния исторических и культурных центров. Поэтому музеи, галереи и памятники сохраняют свой благородный облик.<br />
+<br />
+Важная проблема, которой уделяется внимание &ndash; доступ туристов к наиболее востребованной информации. Для этих целей даже создан специальный информационный центр. Что в первую очередь интересно вновь прибывшим гостям Северной Венеции, как принято называть Петербург? Естественно, первоначально люди планируют, где им остановиться на время пребывания в городе, и выбирают подходящие гостиницы Петербурга. На созданном недавно информационном ресурсе для туристов содержится большая база гостиниц Петербурга. Все, что может потребоваться человеку для размещения в Петербурге, а речь идет о сопутствующей информации &ndash; описания, цены, фотографии гостиниц Питера &ndash; находится в соответствующих разделах. Даже новичку будет нетрудно сориентироваться в этой базе и забронировать номер. Кстати, бронирование номеров в гостиницах Петербурга делается на расстоянии без проблем &ndash; либо по Интернету, либо посредством телефонного звонка, и в тот момент, когда человек приезжает в выбранную гостиницу Санкт-Петербурга, номер уже ждет его.<br />
+<br />
+Для гостей города построено великое множество отелей Петербурга, и все они по-своему хороши. Хотя настоящей легендой для туристов стала гостиница Россия, Питер может предложить номера на любой кошелек и вкус.<br />
+<br />
+Фешенебельные пятизвездочные отели СПб не уступают в роскоши и комфортабельности лучшим мировым отелям, и стоят в одном ряду с берлинскими, парижскими и нью-йоркскими гостиницами. Идеальные условия для жизни и отдыха, полный перечень услуг для делового человека и многое другое привлекает бизнесменов, знаменитостей и политиков.<br />
+<br />
+Чуть ниже классом находятся четырехзвездочные гостиницы Петербурга. И пусть в списке их услуг чуть меньше, чем у отелей с пятью звездами, они шикарны, удобно расположены, позволяют насладиться и уютом номеров, и разнообразием культурной программы, и с пользой организовать свое время. О бытовых моментах при этом не придется думать совсем &ndash; с этим прекрасно справляется вышколенный персонал.<br />
+<br />
+Трехзвездочные гостиницы Петербурга занимают самую выгодную для широких слоев населения ценовую нишу. Они как раз и есть то самое, что называют приличной гостиницей, а если учесть, что востребованность номеров в них просто бьет все рекорды, о заказе следует побеспокоиться заранее.<br />
+<br />
+Интересен многим будет и такой сегмент, как мини-гостиницы. Они вполне могут предложить приемлемый уровень комфорта, и подойдут тем, кто приехал хорошенько изучать город или решать насущные дела. Возникли такие мини-отели почти сто лет назад, когда большие дворянские и чиновничьи квартиры были переоборудованы в удобные гостиницы. Так или иначе, любой из вариантов отелей имеет устойчивый спрос, ведь красивые гостиничные номера СПб &ndash; зачастую гораздо лучше дорогих съемных квартир и комнат.</p>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- Footer -->
+
+	<div class="footer">
+		<div class="footer-inner">
+			<address class="copy">&copy; 2009 Gnutoff</address>
+			<address class="gnutoff">Создание сайта <a href="http://www.gnutoff.ru">Gnutoff</a></address>
+			<div class="counter"><img src="uploads2/counter.png" alt="" /></div>
+			<ul>
+		<li><a href="/about">О сайте</a></li>
+<li><a href="/city">Города</a></li>
+
+			</ul>
+		</div>
+	</div>
+<div id="gmap-progress-bar"></div>
+	
+</body>
+</html>
+

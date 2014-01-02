@@ -1,0 +1,48 @@
+
+#container {text-align:center; width:468px; position: relative; left:0; top:0;  }
+
+#nav, n#nav ul { padding : 0; margin : 0; list-style : none; }
+
+#nav li {float : left;  background-color : #000000; width:117px; height: 32px; }
+#nav li:hover { color : #70d2f4;}
+
+#nav ul  {position: absolute; width:468px; left:-999em; text-align : center; }
+#nav li ul li { background-image :  url(Image/mebu1.gif); position: relative;  left:-40px; height : 20px; width:468px;}
+#nav li ul {list-style : none;  text-align : center; height : 20px;}
+#nav li:hover ul  { left:0px;  top:32px;}
+
+#nav li a { font-family : tahoma; font-weight : Regular; font-size : 15px; color : #ffffff; text-decoration : none; vertical-align :   sub; }
+
+#nav li ul li a  {font-family : tahoma; font-weight : Regular; font-size : 11px; color : #ffffff; text-decoration : none; vertical-align : middle; }
+#nav li ul li a:hover  {font-family : tahoma; font-weight : Regular; font-size : 11px; color : #ffffff; text-decoration :  underline;}
+
+#li1{
+background-image :  url(Image/menuleft.gif);
+background-position : left;
+background-repeat : no-repeat;
+
+}
+#li1:hover
+{
+background-image : url(Image/menuleft1.gif);
+background-position :top left;
+background-repeat :  no-repeat;
+background-color : #70d2f4;
+}
+
+#li2:hover{background-color : #70d2f4;}
+#li3:hover{background-color : #70d2f4;}
+
+#li4{
+background-image :  url(Image/menuright.gif);
+background-position : right;
+background-repeat : no-repeat;
+
+}
+#li4:hover
+{
+background-image : url(Image/menuright1.gif);
+background-position :top right;
+background-repeat :  no-repeat;
+background-color : #70d2f4;
+}

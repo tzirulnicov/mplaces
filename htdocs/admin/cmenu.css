@@ -1,0 +1,128 @@
+﻿.cmenu_menu
+{
+	border: #ff7300 2px solid;
+	padding: 0;
+	margin: 0;
+	filter: alpha(opacity=80,style=0);
+	opacity: 0.8;
+	position: absolute;
+	background-color: #e8eee8;
+	font-size: 11px;
+	font-weight: bold;
+}
+.cmenu_menu *
+{
+	cursor: default;
+}
+.cmenu_menu td
+{
+	padding: 0;
+	margin: 0;
+}
+.cmenu_item_down
+{
+	padding: 4 10;
+	margin: 0px;
+	color: #ffffff;
+	background-color: #808080;
+}
+.cmenu_item_out, .cmenu_item_on
+{
+	padding: 4 10 4 10;
+	margin: 0;
+	color: #606060;
+	position: relative;
+}
+.cmenu_item_on
+{
+	color: #ffffff;
+	background-color: #ff7300;
+}
+.cmenu_item_on *
+{
+	color: #ffffff;
+}
+.cmenu_item_out *
+{
+	color: #606260;
+}
+.cmenu_JMISubMenu
+{
+	padding-right: 12px;
+}
+.cmenu_4
+{
+	font-size: 10px;
+	right: 5px;
+	position: absolute;
+}
+.cmenu_title
+{
+	padding: 4 10;
+	margin: 0 0 2 0;
+	color: #ffffff;
+	background-color: #ff7300;
+	text-align: center
+}
+.cmenu_title *
+{
+	color: #ffffff;
+}
+.cmenu_hr
+{
+	padding: 0;
+	font-size: 1px;
+	left: 0px;
+	margin: 2px 0px;
+	height: 2px;
+	background-color: #ff7300;
+}
+.jcalendar .dtd
+{
+	border: #ff7300 1px solid;
+	padding: 2 3;
+	cursor: pointer;
+	text-align: center;
+}
+.jcalendar table
+{
+	width: 100%;
+	border-spacing: expression(this.cellSpacing=2); /*IE*/
+	border-spacing: 2;
+}
+.jcalendar .day
+{
+	border: #808080 1px solid;
+	padding: 2 3;
+	background-color: #dcdcdc;
+	text-align: center
+}
+.jcalendar .head
+{
+	margin-bottom: 4px;
+	border-bottom: #808080 2px solid
+}
+.jcalendar .datestr
+{
+	padding-bottom: 4px;
+	text-align: center
+}
+.jcalendar BUTTON
+{
+	width: 30px
+}
+.jcalendar .buttons
+{
+	padding-bottom: 2px;
+	padding-top: 3px;
+	text-align: center
+}
+.jcalendar .dtd_on
+{
+	color: #ffffff;
+	background-color: #ff7300
+}
+.cmenu_title TD
+{
+	color: #ffffff
+}

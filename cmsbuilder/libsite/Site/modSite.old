@@ -1,0 +1,46 @@
+﻿# (с) Леонов П.А., 2006
+
+package modSite;
+use strict qw(subs vars);
+use utf8;
+use CMSBuilder::IO;#for headers manipulating
+
+our @ISA = qw(plgnSite::Member CMSBuilder::DBI::TreeModule);
+
+our $VERSION = 1.0.0.0;
+
+sub _cname {'Сайт'}
+sub _aview {qw(name bigname title_index title email address icq skype content)}
+sub _have_icon {1}
+sub _add_classes {qw/!Tag !Payment !Station/}
+sub _template_export {qw(mainmenu onmain onpage print_tree city_excursies city_contacts)}
+sub _props
+{
+	bigname		=> { type => 'string', name => 'Название проекта' },
+	title_index		=> { type => 'string', name => 'Заголовок на главной' },
+	title			=> { type => 'string', name => 'Постоянная часть заголовка' },
+	email			=> { type => 'string', length => 50, name => 'E-mail администратора' },
+	address		=> { type => 'string', length => 50, name => 'Адрес сайта' },
+	content		=> { type => 'miniword', name => 'Текст' },
+	icq		=> { type => 'int', length=>11, name=> 'ICQ' },
+	skype		=> { type => 'string', name=> 'Skype' }
+}
+
+sub _rpcs{qw/postmail view_captcha check_captcha/}
+
+#———————————————————————————————————————————————————————————————————————————————
+
+#(c) tz
+sub postmail
+{
+        my $o = shift;
+        my $r = shift;
+#print 'yes';
+if (!$r->{tel} && !$r->{email}){
+   print 'no';
+   return;
+}
+        my $sended = CMSBuilder::Utils::sendmail
+        (
+                to              => $o->root->{email},
+           

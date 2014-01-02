@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+<title>Вход в систему администрирования</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="ajax.css" rel="stylesheet" type="text/css" />
+<link href="admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body_index">
+<script language="JavaScript" src="admin.js"></script>
+<script language="JavaScript" src="cmenu.js"></script>
+<script language="JavaScript" src="/ajax.js"></script>
+
+<table width="100%" height="100%">
+
+<tr>
+<td class="toolbar" id="tbpanel">
+	<table>
+	<tr>
+		<td width="10%"></td>
+		<td width="80%" align="center">Вход в систему администрирования</td>
+		<td width="10%" align="right"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+	
+	<table width="95%" height="100%" align="center">
+	<tr>
+		<td id="id_left_border" class="bigborder bbv">&nbsp;</td>
+		<td id="errorcontent">
+			
+			<div>
+				<p>
+				<?eml plgnUsers::Login->act() ?>
+				</p>
+				
+				<p>
+					<form action="?" method="post">
+					<input type="hidden" value="in" name="act">
+					<p>Логин:<br><input type="text" value="" name="login"></p>
+					<p>Пароль:<br><input type="password" value="" name="pas"></p>
+					<p><input type="submit" value="Войти"></p>
+					</form>
+				</p>
+				
+				<p>
+				<?eml plgnUsers::Login->list() ?>
+				</p>
+			</div>
+			
+		</td>
+		<td class="bigborder bbv">&nbsp;</td>
+	</tr>
+	</table>
+	
+</td></tr>
+
+
+
+
+
+<tr>
+<td class="toolbar" id="tbstatus">
+	<table>
+	<tr>
+		<td width="30%" align="left"></td>
+		<td width="40%" align="center">&nbsp;</td>
+		<td width="30%" align="right"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>

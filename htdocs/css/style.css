@@ -1,0 +1,117 @@
+* {padding:0; margin:0}
+html {height:100%}
+body {position:relative; height:100%; font-family:tahoma; font-size:12px; min-width:1000px; background:url(../images/top.png) 0 0 repeat-x}
+img {border:0}
+a {outline:none; color:#2b5565}
+a:hover {text-decoration:none}
+ul {list-style:none}
+h1 {padding:0 0 4px, font-size: 25px;}
+h1 span, h2 span, dt span {display:none}
+h3 {font-size:15px; color:#2d5768; font-weight:normal}
+
+.container {min-height:100%; background:url(../images/content-bottom.jpg) 100% 100% no-repeat}
+* html .container {height:100%; width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 1003)? "1003px" : "100%")}
+.empty {height:100px; clear:both}
+
+.head {min-height:120px; background:url(../images/l-top.png) no-repeat}
+* html .head {height:120px}
+.logo {position:absolute; margin:27px 0 0 26px}
+.head ul {text-align:right; padding:34px 0 0; margin:0 219px 0 0}
+.head ul li {display:inline; padding:0 13px}
+.head ul li a {font-size:14px; text-decoration:none; font-family:arial; background:url(../images/line.gif) 0 100% repeat-x; padding:0 1px 1px 0}
+.head ul li a:hover {color:#f58220}
+.contacts {font-size:18px; line-height:22px; color:#000; float:right; padding:0 28px 0 0; margin:-42px 0 0 0; text-align:right}
+.contacts a {font-size:11px; color:#2c5566}
+
+.left-column {width:231px; float:left; padding:0 0 0 29px; margin:30px 0 0; position:relative; z-index:10; background:url(../images/content-top.jpg) 0 60px no-repeat}
+.left-column dt {float:left; clear:both; font-size:16px; font-weight:normal; background:url(../images/icon.gif) 0 13px no-repeat; padding:10px 0 6px 23px}
+.left-column dt a {color:#f79731; text-decoration:none; background:url(../images/line.gif) 0 100% repeat-x; padding:0 0 1px}
+.left-column dt a:hover {background:none}
+.left-column dd {position:relative; left:32px; float:left; clear:left}
+.left-column dd a {font-size:14px; line-height:26px; padding:0 15px 2px 15px; position:relative; float:left; white-space:nowrap}
+.left-column dd a img {position:absolute; background:url(../images/border.png) no-repeat; padding:14px 17px 15px; margin:-34px 0 0 13px; visibility:hidden}
+*+html .left-column dd a img {margin-top:-37px}
+
+.left-column dd:hover {background:url(../images/menu-h.png) 0 0 no-repeat; z-index:99}
+.left-column dd:hover a {background:url(../images/menu-h-2.png) 100% 0 no-repeat; text-decoration:none; color:#000; z-index:99}
+.left-column dd:hover a img {visibility:visible; width:97px; height:71px}
+
+.left-column dd.active, .left-column dd.active:hover {background:url(../images/menu-active.png) 0 0 no-repeat; z-index:1}
+.left-column dd.active a, .left-column dd.active:hover a {background:url(../images/menu-active-2.png) 100% 0 no-repeat; text-decoration:none; z-index:1}
+.left-column dd.active a img, .left-column dd.active:hover a img {visibility:hidden}
+
+.center-column {margin:0 270px 0 270px; padding:48px 0 0 1px}
+.block {background:url(../images/t.png) repeat-x #e5ebee}
+.block:before {content:url(../images/lt.png); background:url(../images/rt.png) 100% 0 no-repeat; display:block; height:8px; margin:0 0 0 -1px}
+.block:after {content:url(../images/lb.gif); background:url(../images/rb.gif) 100% 0 no-repeat; display:block; height:7px; padding:0 1px 0 0}
+.left {background:url(../images/left.png) repeat-y; margin:0 0 0 -1px}
+.right {background:url(../images/right.png) 100% 0 repeat-y}
+.necessary {background:url(../images/b.gif) 0 100% repeat-x; min-height:200px; margin:0 0 -7px 1px; padding:25px 28px}
+.necessary dl {min-height:80px}
+* html .necessary dl {height:80px}
+.necessary dt {font-size:15px; color:#2d5768}
+.necessary dd {font-size:11px; color:#100303} 
+.necessary dd a {font-size:11px; color:#100303; line-height:19px}
+.necessary dl.covers {background:url(../images/cat1.png) 0 0 no-repeat; padding:8px 0 20px 111px}
+.necessary .piece-skin {background:url(../images/skin-bg.png) 0 0 repeat-x; margin:0 -23px -25px -24px; padding:0 28px}
+.necessary .piece-skin dl {background:url(../images/cat2.png) 0 20px no-repeat; padding:28px 0 30px 111px}
+.content {background:url(../images/block-center.png) 0 0 repeat-x; min-height:180px; margin:20px 4px 0 3px; padding:24px 30px 0 44px; color:#100303}
+.content:before {content:url(../images/block-lt.png); background:url(../images/block-rt.png) 100% 0 no-repeat; display:block; height:2px; margin:-24px -30px 0 -44px; padding:0 0 22px}
+* html .content {height:180px}
+.content h2 {margin:0 0 10px -14px}
+
+.right-column {width:254px; float:right; padding:100px 0 0}
+.right-column dl {width:202px; background:url(../images/center2.png) repeat-y; padding:0 15px; margin:-64px 0 0}
+.right-column dl dd a {font-size:14px; color:#100303; line-height:25px; position:relative}
+.right-column dl:before {content:url(../images/top2.png); display:block; height:155px; margin:0 0 -142px -15px}
+.right-column dl:after {content:url(../images/bottom2.png); display:block; height:155px; margin:-142px 0 0 -15px}
+.right-column p {font-size:11px; padding:18px 25px 0 0}
+
+.categories {background:url(../images/cat-c.png) 0 0 repeat-x; margin:28px 27px 0 270px; color:#100303; font-size:11px; padding:0 0 0 25px}
+.categories:before {content:url(../images/cat-l.png); background:url(../images/cat-r.png) 100% 0 no-repeat; display:block; height:90px; margin:0 0 -75px -25px}
+.categories h1 {font-size:25px; font-weight:normal}
+.breadcrumbs {margin:-2px 0 30px 2px; position:relative}
+.categories a, .commodities a {color:#100303}
+a.current {text-decoration:none; color:#2b5565}
+a.current:hover {text-decoration:underline}
+.categories ul li {float:left; min-height:130px; width:31%; margin:0 15px 0 0; padding:0 0 0 110px}
+* html .categories ul li {height:130px}
+.categories ul li a {text-decoration:none}
+.categories ul li a:hover {color:#f79731}
+.categories ul li a img {position:absolute; margin:0 0 0 -110px}
+.categories ul li h4 {padding:0 0 5px}
+.categories ul li h4 a {font-size:15px; color:#2d5768; font-weight:normal} 
+
+.commodities {margin:75px 270px 0 250px; color:#100303; font-size:11px; padding:0 0 0 25px}
+.commodities:before {content:url(../images/comm-top.png); display:block; height:150px; margin:0 0 -180px; position:relative; z-index:1}
+.commodities:after {content:url(../images/comm-bottom.png); display:block; height:150px; margin:-100px 0 0; position:relative; z-index:1}
+.commodities h1 {font-size:25px; font-weight:normal; padding:0 0 0 20px; position:relative}
+.commodities .breadcrumbs {margin:2px 0 15px 22px}
+.commodities ul {background:url(../images/price.png) 100% 0 repeat-y; overflow:hidden; zoom:1; border-left:1px solid #4c87a0; min-height:200px}
+* html .commodities ul {height:200px}
+.commodities ul:before {content:url(../images/blank.gif); background:url(../images/order-top.png) 100% 0 no-repeat; display:block; height:13px; margin:0 0 -14px}
+.commodities ul:after {content:url(../images/blank.gif); background:url(../images/order-bottom.png) 100% 0 no-repeat; display:block; height:13px; margin:-14px 0 0}
+.commodities ul li {padding:15px 0 15px 130px; min-height:70px; border-top:1px solid #edf3f5; margin:-1px 172px 0 0; clear:both; display:block}
+* html .commodities ul li {height:70px}
+.commodities ul li img {position:absolute; margin:0 0 0 -110px}
+.price {float:right; width:162px; padding:0 0 0 25px; font-size:13px; line-height:20px; margin:0 -172px 0 0; position:relative}
+.commodities ul li h2 {font-size:15px; color:#2d5768; font-weight:normal; padding:0 0 4px}
+.order {padding:12px 0 0}
+.order a {font-size:12px; color:#fff; text-decoration:none; background:url(../images/to-order.png); width:70px; height:18px; line-height:15px; text-align:center; display:block}
+.order a:hover {color:#ccc}
+.sum {color:#f89731}
+.amount {color:#2d5768}
+
+.content-block {font-size:12px; padding:0 0 0 20px; border-left:1px solid #4c87a0; min-height:200px; margin:0 -200px 0 0; position:relative}
+* html .content-block {height:200px}
+
+.footer {height:75px; background:#567c8c; margin:-75px 0 0 0; color:#fff; width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 1003)? "1003px" : "100%")}
+.fbg {background:url(../images/bottom.jpg) 9px 0 no-repeat; display:block; height:50px; width:174px; margin:-50px -174px 0 0; float:left; position:relative}
+.footer a {text-decoration:none; color:#fff}
+.footer a:hover {text-decoration:underline}
+.f-logo {float:left; margin:17px 28px 0}
+.markdep {float:left; padding:12px 0 0 76px}
+.meters {float:right; padding:22px 78px 0 0}
+.meters a {margin:0 0 0 3px}
+.creation {font-size:11px; float:right; padding:25px 50px 0}
+

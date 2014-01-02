@@ -1,0 +1,119 @@
+﻿<?eml CMSFront::access(); ?>
+<html>
+<head>
+<title>Система администрирования</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="cmenu.css" rel="stylesheet" type="text/css" />
+<link href="admin.css" rel="stylesheet" type="text/css" />
+<link href="ajax.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body_index">
+<script language="JavaScript" src="admin.js"></script>
+<script language="JavaScript" src="cmenu.js"></script>
+<script language="JavaScript" src="/ajax.js"></script>
+
+
+<table width="100%" height="100%">
+
+<tr>
+<td class="toolbar" id="tbpanel">
+	<table>
+	<tr>
+		<td><div id="left_panels_holder"><div id="top_panel_float"><?eml CMSFront::user_xinfo('main_menu') ?></div></div></td>
+		<td width="30%">&nbsp;</td>
+		<td width="40%" id="aboutbox"><?eml CMSFront::servername() ?><a href="/">На сайт...</a>
+		<a target="admin_right" href="about.html">О системе...</a>
+		<?eml CMSFront::user_xinfo('exit') ?></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+
+
+<tr>
+<td align="center">
+	
+	<table width="95%" height="100%" align="center">
+	<tr>
+		<?eml if($CMSBuilder::Config::have_left_frame){ ?>
+		<td id="id_left_border" class="bigborder bbv">&nbsp;</td>
+		<td width="<?eml CMSFront::user_xinfo('left_td_width') ?>" id="id_left_td" valign="top">
+		<table width="100%" height="100%">
+			<!-- left -->
+			<tr id="admin_left_tr">
+				<td>
+					
+					<iframe id="admin_left" name="admin_left" class="wide" frameborder="0"></iframe>
+				</td>
+			</tr>
+			<!-- /left -->
+			<tr class="bigborder bbh"><td></td></tr>
+			<tr height="182">
+				<td valign="top">
+					<table width="100%" height="100%">
+						<tr><td class="framehead">Персональные модули</td></tr>
+						<tr><td><iframe name="admin_modules" src="modules.ehtml<?eml if(my $url = CGI::param('url')){ print "?url=$url"; } ?>" class="wide" frameborder="0"></iframe></td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+		</td>
+		
+		<td class="bigborder bbv" valign="top">
+			<img scr="img/null.gif" width="1" height="100">
+			<a href="hide"><img id="btn_treehide" alt="Скрыть дерево" src="img/left_hide.gif" onclick="return HideLeft();"></a>
+			<a href="show"><img id="btn_treeshow" alt="Показать дерево" style="display: none" src="img/left_show.gif" onclick="return ShowLeft();"></a>
+			
+			<img scr="img/null.gif" width="1" height="100">
+			<img style="cursor: w-resize" onmousedown="return CMS_Float_MD(this)" id="btn_treeresize" alt="Изменить размер" src="img/left_resize.gif">
+		</td>
+		
+		<?eml }else{ ?>
+		
+		<td id="id_left_border" class="bigborder bbv">&nbsp;</td>
+		
+		<?eml } ?>
+		
+		<td>
+			<div style="position:relative;"><div style="position:absolute;left:0;top:0;z-index:5">&nbsp;</div></div>
+			<iframe style="display: block;" id="admin_right" name="admin_right" class="wide" frameborder="0"></iframe>
+		</td>
+		<td class="bigborder bbv">&nbsp;</td>
+	</tr>
+	</table>
+	
+</td></tr>
+
+
+<script language="JavaScript">
+	
+	if(CMS_HaveParent()) parent.parent.parent.document.location.href = location.href;
+	
+</script>
+
+
+<tr>
+<td class="toolbar" id="tbstatus">
+	<table>
+	<tr>
+		<td>&nbsp;</td>
+		<td width="10%"><?eml CMSFront::user_xinfo('name') ?> <div id="version">( <?eml print $CMSBuilder::version; ?> )</div></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+</table>
+
+<iframe name="admin_temp" src="about:blank" class="wide" frameborder="0" style="display: none"></iframe>
+
+<table id="movemodalwindow" class="modalwindowbg" style="display: none">
+    <tr>
+		<td>&nbsp;</td>
+    </tr>
+</table>
+
+</body>
+</html>

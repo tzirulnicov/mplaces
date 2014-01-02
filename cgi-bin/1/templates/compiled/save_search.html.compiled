@@ -1,0 +1,321 @@
+# This file is a compiled version of a template that can be run much faster
+# than reparsing the file, yet accomplishes the same thing. You should not
+# attempt to modify this file as any changes you make would be lost as soon as
+# the original template file is modified.
+# Generated: Wed Oct 14 17:07:04 2009
+# Editor: vim: syn=perl
+{
+    parse_date => 1255525624,
+    deps => ["REL\:header\.txt"],
+    parser_version => 2.058,
+    file_type => 'REL',
+    code => sub {
+
+local $^W; # Get rid of warnings. unfortunately, this won't work for Perl 5.6's -W switch
+my $self = shift;
+my $return = '';
+my $escape = $self->{opt}->{escape};
+my $strict = $self->{opt}->{strict};
+my $tmp;
+$return .= q{<HTML>
+<HEAD>
+<TITLE>MySQLMan: Save Search Result</TITLE>
+
+</HEAD>
+<BODY BGCOLOR="#CCCCCC">
+<table border=1 bgcolor="#FFFFFF" cellpadding=5 cellspacing=3 width="100%" align=center valign=top>
+			<tr><td bgcolor="navy">
+					<FONT FACE="MS Sans Serif, arial,helvetica" size=1 COLOR="#FFFFFF">
+                    <b>MySQLMan: Save Search Result</b>
+			</td></tr>
+			<tr><td>
+};
+{; #Including ./templates/header.txt
+  $return .= q{<table border="1" width="100%" cellspacing="0" cellpadding="2">
+  <tr>
+    <td width="80%"><b><font face="Verdana, Arial, Helvetica" size="4"><A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{home_url}, $escape, $strict));
+  $return .= q{">Top</A> :
+      <A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{">Mysql</A> 
+      };
+  if ($self->_get_var(q{db}, 0, 0)) {
+    $return .= q{ : <A href="};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+    $return .= q{?do=tables&data_source=};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+    $return .= q{">};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{db}, $escape, $strict));
+    $return .= q{</A>};
+  }
+  $return .= q{
+      };
+  if ($self->_get_var(q{table}, 0, 0)) {
+    unless ($self->_get_var(q{do}, 0, 0)  eq  q{create_table}) {
+      $return .= q{: };
+      $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+      $return .= q{ };
+      if ($self->_get_var(q{page}, 0, 0)  >  1) {
+        $return .= q{ (page };
+        $return .= $tmp if defined($tmp = $self->_get_var(q{page}, $escape, $strict));
+        $return .= q{) };
+      }
+      $return .= q{ };
+    }
+    $return .= q{ };
+  }
+  $return .= q{
+    </td>
+    <td width="20%" align="right">
+	    <font face="Verdana, Arial, Helvetica" size="2">
+	    <b>Help:</b> 
+	    <a href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{?do=help&help_topic=home" target="a">Home</a> | 
+	    <a href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{?do=help&help_topic=};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{help_topic}, $escape, $strict));
+  $return .= q{" target="a">Page</a>
+	    </font>
+    </td>
+  </tr>
+  <tr>
+    
+    };
+  unless ($self->_get_var(q{db}, 0, 0)) {
+    $return .= q{<td width="80%" valign=top>};
+  }
+  $return .= q{
+    };
+  if ($self->_get_var(q{db}, 0, 0)) {
+    $return .= q{<td width="80%">};
+  }
+  $return .= q{<font face="Verdana, Arial, Helvetica" size="2"><b>Databases:</b>
+
+      <A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{">List</A> 
+      | <A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{?do=top_level_op&data_source=};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+  $return .= q{&action=create_db">Create</A> 
+      };
+  if ($self->_get_var(q{db}, 0, 0)) {
+    $return .= q{
+      | <A href="};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+    $return .= q{?do=top_level_op&data_source=};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+    $return .= q{&table=};
+    unless ($self->_get_var(q{do}, 0, 0)  eq  q{create_table}) {
+      $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+    }
+    $return .= q{&action=sql_monitor">SQL Monitor</A> 
+      | <A href="};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+    $return .= q{?do=top_level_op&data_source=};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+    $return .= q{&table=};
+    unless ($self->_get_var(q{do}, 0, 0)  eq  q{create_table}) {
+      $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+    }
+    $return .= q{&action=mysqldump">SQL Dump</A>
+      };
+  }
+  $return .= q{
+      | <A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{?do=login&data_source=};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+  $return .= q{&table=};
+  unless ($self->_get_var(q{do}, 0, 0)  eq  q{create_table}) {
+    $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+  }
+  $return .= q{">Login</A>
+      | <A href="};
+  $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+  $return .= q{?do=logout">Logout</A> 
+    <br>
+      };
+  if ($self->_get_var(q{db}, 0, 0)) {
+    $return .= q{
+	<b>Tables:</b> 
+		<A href="};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+    $return .= q{?do=tables&data_source=};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+    $return .= q{">List</A> 
+		| <A href="};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+    $return .= q{?do=top_level_op&data_source=};
+    $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+    $return .= q{&action=create_table">Create</A> 
+		};
+    if ($self->_get_var(q{table}, 0, 0)) {
+      $return .= q{
+			};
+      unless ($self->_get_var(q{do}, 0, 0)  eq  q{create_table}) {
+        $return .= q{
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=browse&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&page=1&action=browse">Browse</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=select&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&page=1&action=select">Search</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=property&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{">Properties</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=insert&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{">Insert</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=modify&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=empty_table&skip_url=1">Empty</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=modify&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=drop_table&skip_url=1">Drop</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=top_level_op&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=import">Import</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=top_level_op&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=export">Export</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=top_level_op&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=rename_table">Rename</A> 
+			| <A href="};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+        $return .= q{?do=top_level_op&data_source=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+        $return .= q{&table=};
+        $return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+        $return .= q{&action=add_fields">Add_Fields</A>
+			};
+      }
+      $return .= q{
+		};
+    }
+    $return .= q{
+      };
+  }
+  $return .= q{ 	
+      
+      </font></td>
+    <td width="20%">
+      <p align="right"><a href="http://www.gossamer-threads.com/scripts/"><font face="Verdana, Arial, Helvetica" size="1">MySQLMan
+      v. };
+  $return .= $tmp if defined($tmp = $self->_get_var(q{version}, $escape, $strict));
+  $return .= q{<br>
+      © 2000 Gossamer Threads Inc.</font></a></td>
+  </tr>
+</table>
+<P>};
+} # Done include
+$return .= q{
+<UL>
+
+<table bgcolor="#FFFFCC" border=1 cellpadding=5 cellspacing=3>
+<td>
+<li><B> Save Search Result:</B><BR>
+	<UL>
+		<FORM METHOD="POST" ACTION="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{script_url}, $escape, $strict));
+$return .= q{" name="ExportForm">
+		<INPUT TYPE="hidden" NAME=do VALUE='export'>
+		<INPUT TYPE="hidden" NAME=data_source VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{data_source}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=table VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{table}, $escape, $strict));
+$return .= q{">
+		
+		<INPUT TYPE="hidden" NAME=action VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{browse_action}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=page VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{page}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=sort_index VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{sort_index}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=fields VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{fields}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=where VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{where}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=example VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{example}, $escape, $strict));
+$return .= q{">
+		<INPUT TYPE="hidden" NAME=from_save_result VALUE="1">
+		<INPUT TYPE="hidden" NAME=query VALUE="};
+$return .= $tmp if defined($tmp = $self->_get_var(q{query}, $escape, $strict));
+$return .= q{">
+
+		<input type="radio" name="export_to_screen" value="1" CHECKED> <B>Print to screen.</B><BR>
+		<input type="radio" name="export_to_screen" value="0"> <B>Export to file.&nbsp;&nbsp;
+		Path: </B><INPUT TYPE="text" NAME="file" VALUE="" SIZE="45"><P>
+
+		<B>Options:</B><BR>
+		Fields:
+		<UL>
+		Delimiter: <INPUT TYPE="text" NAME="delimiter" VALUE="|" SIZE="2"><BR>
+		Escape Character: <INPUT TYPE="text" NAME="escape_char" VALUE="\" SIZE="2"><BR>
+		</UL>
+		Records:
+		<UL>
+		Delimiter: <INPUT TYPE="text" NAME="rec_del" VALUE="\n" SIZE="3"><BR>
+		</UL>
+		<P>
+		<INPUT TYPE="submit" value=" Save ">
+		</FORM>
+	</UL>
+</td></table>
+
+</UL>
+</td></tr></table>
+</BODY>
+</HTML>
+};
+return \$return;
+}
+}

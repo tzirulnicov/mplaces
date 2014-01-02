@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+use IO::Socket::INET;
+$r=IO::Socket::INET->new('ya.ru');
+print 123;

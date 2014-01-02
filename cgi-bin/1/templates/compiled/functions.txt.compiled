@@ -1,0 +1,41 @@
+# This file is a compiled version of a template that can be run much faster
+# than reparsing the file, yet accomplishes the same thing. You should not
+# attempt to modify this file as any changes you make would be lost as soon as
+# the original template file is modified.
+# Generated: Wed Oct 14 17:00:13 2009
+# Editor: vim: syn=perl
+{
+    parse_date => 1255525213,
+    deps => [],
+    parser_version => 2.058,
+    file_type => 'REL',
+    code => sub {
+
+local $^W; # Get rid of warnings. unfortunately, this won't work for Perl 5.6's -W switch
+my $self = shift;
+my $return = '';
+my $escape = $self->{opt}->{escape};
+my $strict = $self->{opt}->{strict};
+my $tmp;
+$return .= q{<select name=*insert*_};
+$return .= $tmp if defined($tmp = $self->_get_var(q{field}, $escape, $strict));
+$return .= q{_function><option>
+<option>ASCII
+<option>CHAR
+<option>SOUNDEX
+<option>CURDATE
+<option>CURTIME
+<option>FROM_DAYS
+<option>FROM_UNIXTIME
+<option>NOW
+<option>PASSWORD
+<option>PERIOD_ADD
+<option>PERIOD_DIFF
+<option>TO_DAYS
+<option>USER
+<option>WEEKDAY
+<option>RAND
+</select>};
+return \$return;
+}
+}

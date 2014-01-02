@@ -1,0 +1,48 @@
+[Fri May 11 18:10:57 2007] [error] Cannot get robot email [/www/gnutoff/lubite.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun May 13 11:59:09 2007] [error] Unknown Module: Error. Unknown column 'messages_on_page' in 'field list' [/www/gnutoff/lubite.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun May 13 12:00:00 2007] [error] Unknown Module: Error. Unknown column 'messages_on_page' in 'field list' [/www/gnutoff/lubite.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sat Aug 11 23:01:52 2007] [error] Error connecting to database Access denied for user 'barchetta'@'localhost' (using password: YES) [/usr/home/html/projects/barchetta.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sat Aug 11 23:02:16 2007] [error] Unknown Module: Error. Table 'tz.news_hosts' doesn't exist [/usr/home/html/projects/barchetta.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Tue Aug 14 20:26:16 2007] [error] Unknown Module: Error. FUNCTION barchetta.cudate does not exist [/usr/home/html/projects/barchetta.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 02 21:09:04 2007] [error] Unknown Module: Error. Unknown column 'rate' in 'field list' [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Sat Oct 20 01:01:02 2007] [error] Error connecting to database Can't connect to local MySQL server through socket '/tmp/mysql.sock' (61) [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Wed Oct 24 01:01:11 2007] [error] NewsBot: Error. MySQL server has gone away [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Mon Mar 03 01:17:45 2008] [error] NewsBot: Error. MySQL server has gone away [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Mon Jun 02 01:01:02 2008] [error] Error connecting to database Can't connect to local MySQL server through socket '/tmp/mysql.sock' (61) [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Sat Jun 14 01:01:01 2008] [error] Error connecting to database Can't connect to local MySQL server through socket '/tmp/mysql.sock' (61) [/www/bestphones/bestphones.ru/htdocs/libbot/lib/Data/Log.pm] [54] 1
+[Fri Jul 18 00:23:16 2008] [error] NewsBot: Error. Table 'evoo.news_hosts2' doesn't exist [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Fri Jul 18 00:28:43 2008] [error] NewsBot: Error. Table 'evoo.news_hosts2' doesn't exist [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Wed Jul 23 12:42:11 2008] [error] NewsBot: Error. Unknown column 'cameraoh' in 'field list' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Mon Aug 11 20:13:13 2008] [error] Unknown Module: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from dbo_CatWareSimple where name="Sony Ericsson K510i red"' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Aug 14 22:44:10 2008] [error] NewsBot: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UPDTE dbo_CatWareSimple set `price`=""
+        where ID=2100' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Tue Sep 09 18:21:57 2008] [error] рТПЙЪПЫМБ ПЫЙВЛБ, ОЕ ВЩМП ПВТБВПФБОП ОЙ ПДОПК ТПЪЩ [/www/evoo/evoo.ru/cmsbuilder/libbot/excel/../lib/Data/Log.pm] [54] 1
+[Thu Sep 25 02:06:39 2008] [error] рТПЙЪПЫМБ ПЫЙВЛБ, ОЕ ВЩМП ПВТБВПФБОП ОЙ ПДОПК ТПЪЩ [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Sep 25 02:11:30 2008] [error] рТПЙЪПЫМБ ПЫЙВЛБ, ОЕ ВЩМП ПВТБВПФБОП ОЙ ПДОПК ТПЪЩ [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Sep 25 15:07:21 2008] [error] рТПЙЪПЫМБ ПЫЙВЛБ, ОЕ ВЩМП ПВТБВПФБОП ОЙ ПДОПК ТПЪЩ [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Sep 25 20:49:20 2008] [error] NewsBot: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'полетный вес="980 гр." 
+	where ID=2237' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Sep 25 20:55:36 2008] [error] NewsBot: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'двигателя="электрический бесколлекторный DT3007 или аналог." 
+	where ID=2238' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Sep 25 20:56:40 2008] [error] NewsBot: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'двигателя="ДВС, объемом  0.40 - 0.46 кубического дюйма" 
+	where ID=2239' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 28 17:46:25 2008] [error] Cannot find MultiCatWare for ware 'Авиамодель р/у "Pilotage Skymaster", электро, RTF' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 28 17:48:01 2008] [error] Cannot find MultiCatWare for ware 'Авиамодель р/у "Pilotage Skymaster", электро, RTF' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 28 18:06:24 2008] [error] Can't find PAPA_ID for ware 'Радиоуправляемый самолет Авиатор "J-3 Sunburst" (Red/Blue), электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 28 18:17:09 2008] [error] Can't find PAPA_ID for ware 'Радиоуправляемый самолет Авиатор "J-3 Sunburst" (Red/Blue), электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sun Sep 28 19:22:29 2008] [error] Can't find PAPA_ID for ware 'Радиоуправляемый самолет Авиатор "J-3 Sunburst" (Red/Blue), электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Mon Sep 29 01:32:46 2008] [error] Can't find PAPA_ID for ware 'Радиоуправляемый танк "M1A2 Abrams Desert", 1:24, ИК пушка' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Mon Sep 29 09:50:21 2008] [error] Can't find PAPA_ID for ware 'Авиамодель р/у слоуфлаера " CargoTrans EDP-50*4, электро ARF' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Tue Sep 30 02:59:55 2008] [error] Can't find PAPA_ID for ware 'Авиамодель р/у слоуфлаера " CargoTrans EDP-50*4, электро ARF' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 02 03:04:45 2008] [error] Can't find PAPA_ID for ware 'Вертолет "CH-46", ИК управление, электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 02 03:13:54 2008] [error] Can't find PAPA_ID for ware 'Вертолет "CH-46", ИК управление, электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 02 03:15:10 2008] [error] Can't find PAPA_ID for ware 'Вертолет "CH-46", ИК управление, электро' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 02 03:45:46 2008] [error] Can't find PAPA_ID for ware 'Мотопилотаж: Набор <Mosquito "Bell 427">+рации' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 02 03:51:11 2008] [error] Can't find PAPA_ID for ware 'Мотопилотаж: Набор <Mosquito "Bell 427">+рации' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Sat Oct 11 20:55:28 2008] [error] price_update: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Thu Oct 16 20:40:42 2008] [error] Unknown Module: Error. Unknown column 'cws.multiprop' in 'where clause' [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Mon Oct 27 20:13:55 2008] [error] Unknown Module: Error. Unknown table 'mp' in field list [/www/evoo/evoo.ru/cmsbuilder/libbot/lib/Data/Log.pm] [54] 1
+[Fri Feb 27 01:30:54 2009] [error] NewsBot: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 [/home/tz/lib/Data/Log.pm] [54] 1
+[Sun Mar 22 23:54:38 2009] [error] Unknown Module: Error. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from dbo_Hotel where ID=1' at line 1 [/home/tz/lib/Data/Log.pm] [54] 1
+[Sun Apr 19 16:00:20 2009] [error] Unknown Module: Error. Query was empty [/home/tz/lib/Data/Log.pm] [54] 1
+[Sun Apr 19 16:00:35 2009] [error] Unknown Module: Error. Query was empty [/home/tz/lib/Data/Log.pm] [54] 1

@@ -1,0 +1,29 @@
+﻿<?eml CMSFront::access(); ?><html>
+<head>
+<link href="cmenu.css" rel="stylesheet" type="text/css" />
+<link href="admin.css" rel="stylesheet" type="text/css" />
+<link href="tree.css" rel="stylesheet" type="text/css" />
+<link href="ajax.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="body_left">
+<script language="JavaScript" src="admin.js"></script>	
+<script language="JavaScript" src="cmenu.js"></script>
+<script language="JavaScript" src="/ajax.js"></script>
+
+<table id="fixedbar"><tr><td class="framehead">
+	<?eml CMSFront::left_head() ?>
+</td></tr></table>
+
+<div class="ctree">
+	<?eml CMSFront::left() ?>
+</div>
+
+<script language="JavaScript">
+<?eml CMSFront::cmenus(); ?>
+<?eml CMSFront::dnd(); ?>
+if(parent.admin_right.CMS_admin_path)
+	parent.admin_right.CMS_admin_path();
+</script>
+
+</body>
+</html>

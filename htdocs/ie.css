@@ -1,0 +1,14 @@
+*html .container {height: 100%;}
+*html .container, *html .footer {width:expression((document.documentElement.clientWidth || document.body.clientWidth) < 996 ? "996px" : "auto");}
+.container, .photo ul, .block, .city, .nav ul li, .footer, .footer-inner, .tags-inner ul {zoom: 1;}
+.contacts h3 sup {font-size:12px;}
+
+*html .city-left div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city-l.png');}
+*html .city-right div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city-r.png');}
+*html .city-center {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city.png', sizingMethod='scale');}
+*html .city a.sel .city-left div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city-l-sel.png');}
+*html .city a.sel .city-right div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city-r-sel.png');}
+*html .city a.sel .city-center {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/city-sel.png', sizingMethod='scale');}
+
+*html .tags-lt div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/tags-left.png');}
+*html .tags-rt div {background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='i/tags-right.png');}

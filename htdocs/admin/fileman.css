@@ -1,0 +1,69 @@
+﻿.fileman_fs_div
+{
+    BORDER-RIGHT: black 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: black 1px solid;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    BORDER-LEFT: black 1px solid;
+    PADDING-TOP: 5px;
+    BORDER-BOTTOM: black 1px solid;
+    BACKGROUND-COLOR: #e2e9e2
+}
+.fileman_menu
+{
+    CURSOR: default
+}
+.fileman_menu A
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px
+}
+.fileman_menu A:hover
+{
+    BORDER-RIGHT: #ff7300 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #ff7300 1px solid;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #ff7300 1px solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #ff7300 1px solid;
+    BACKGROUND-COLOR: #e2e9e2
+}
+.fileman_menu .hover
+{
+    BORDER-RIGHT: #ff7300 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #ff7300 1px solid;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #ff7300 1px solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #ff7300 1px solid
+}
+.fileman_tbl
+{
+}
+.fileman_tbl .head
+{
+}
+.fileman_tbl .head TD
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: bold
+}
+.fileman_tbl .name
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px
+}
+.fileman_tbl .prop
+{
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    TEXT-ALIGN: right
+}
